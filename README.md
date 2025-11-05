@@ -1,7 +1,6 @@
 # 3SAA — Matlab
-3SAA model to retrieve aph and adg
+3SAA model based on Jorge et al., 2021.
 This repository provides a MATLAB implementation of the 3SAA model for the **OLCI (ESA) sensor**.  
-The retrieval is based on Jorge et al., 2021.
 
 ---
 
