@@ -8,14 +8,14 @@ This repository provides a MATLAB implementation of the 3SAA model for the **OLC
 
 The main function is:
 
-% Retrieve $$a_{nw}$$, $$bb_{p}$$, $$K_{d}$$, $$a_{ph}$$ and $$a_{dg}$$ at specific wavelength (412, 443, 490, 510, 560, 665)
+% Retrieve $$a_{ph}$$, $$a_{dg}$$, $$a_{nw}$$, $$bb_{p}$$ and $$K_{d}$$,  and  at specific wavelength (412, 443, 490, 510, 560, 665)
 ```matlab
-[aphy_3SAA,adg_3SAA,ANW,BBP,KD]=Run_3SAA(Rrs,asol00,[],4,1,4,0,0,[],[],[],0,[],0,[]);
+[aphy_3SAA,adg_3SAA,ANW,BBP,KD]=Run_3SAA(Rrs,asol,[],4,1,4,0,0,[],[],[],0,[],0,[]);
 ```
 ### Main Inputs
 - Rrs — Remote sensing reflectance values (n × 6 matrix) at the following wavelengths:  
   412, 443, 490, 510, 560, 665 nm.  
-- muw — Solar zenith angle (ρ) in degrees (n × 1 vector).  
+- asol — Solar zenith angle (ρ) in degrees (n × 1 vector).  
 
 ### Output
 - $$a_{ph}$$ ($\lambda$) — Estimated aph values (n × 6 vector).  
@@ -50,7 +50,7 @@ addpath(genpath('3SAA'));
 Rrs = xlsread('IOCCG_dataset.xlsx','Feuil1','I2:P1501');
 Rrs=Rrs(1:500,:);%Select the first 500 points with asol equal to 0
 Rrs=Rrs(:,[2 3 4 5 6 8]);%Select the 6 OLCI bands used for 3SAA [412 443 490 510 560 665]
-asol00(1:500)=0;
+asol(1:500)=0;
 
 %Rrs              % Reflectance for 200 samples × 11 wavelengths
 %asol00              % Solar zenith angle in degrees
@@ -58,7 +58,7 @@ asol00(1:500)=0;
 ```
 6. Run the function:
 ```matlab
-[aphy_3SAA,adg_3SAA,ANW,BBP,KD]=Run_3SAA(Rrs,asol00,[],4,1,4,0,0,[],[],[],0,[],0,[]);
+[aphy_3SAA,adg_3SAA,ANW,BBP,KD]=Run_3SAA(Rrs,asol,[],4,1,4,0,0,[],[],[],0,[],0,[]);
 ```
 
 
