@@ -53,8 +53,8 @@ Rrs=Rrs(1:500,:);%Select the first 500 points with asol equal to 0
 Rrs=Rrs(:,[2 3 4 5 6 8]);%Select the 6 OLCI bands used for 3SAA [412 443 490 510 560 665]
 asol(1:500)=0;
 
-%Rrs              % Reflectance for 200 samples × 11 wavelengths
-%asol00           % Solar zenith angle in degrees
+%Rrs         % Reflectance for 200 samples × 11 wavelengths
+%asol00      % Solar zenith angle in degrees
 
 ```
 6. Run the function:
@@ -65,10 +65,10 @@ asol(1:500)=0;
 
 ## 📂 File Structure
 
-- Run_3SAA.m         — Main function to estimate Kd values.  
+- Run_3SAA.m         — Main function to estimate Kd values.  
 - IOCCG_dataset.xlsx — Example data to test the code.  
-- LUT                — Directory with all the look up tables.
-- Function           — Directory with all the sub function.
+- LUT                — Directory with all the look up tables.
+- Function           — Directory with all the sub function.
 ---
 
 ## 📖 References
