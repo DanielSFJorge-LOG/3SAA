@@ -43,6 +43,7 @@ cd 3SAA
 3. Add the folder to your MATLAB path:
 ```matlab
 addpath(genpath('3SAA'));
+rehash toolboxcache
 ```
 4. Prepare your inputs:
 % Example input
