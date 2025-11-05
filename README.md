@@ -37,7 +37,7 @@ The main function is:
 1. Clone this repository:
 
 ```matlab   
-git clone https://github.com/DanielSFJorge-LOG/3SAA
+git clone https://github.com/TELHYD-LOG/3SAA
 cd 3SAA
 ```
 3. Add the folder to your MATLAB path:
